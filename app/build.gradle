@@ -11,9 +11,9 @@ android {
         versionCode 1
         versionName "0.1"
 
-        manifestPlaceholders = [onesignal_app_id: "*****",
+        manifestPlaceholders = [onesignal_app_id: "****",
                                 // Project number pulled from dashboard
-                                onesignal_google_project_number: "*****"]
+                                onesignal_google_project_number: "****"]
 
 
     }

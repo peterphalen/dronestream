@@ -126,18 +126,6 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
     }
 
-    //this method is fired by the little question mark button defined in xml
-    public void help(View view) {
-
-        //take us to the Guardian Website
-        String url = "http://dronestre.am/";
-        //android OS is smart enough to figure out which browser to open, so
-        //a generic "ACTION_VIEW" call is used
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
-        startActivity(i);
-    }
-
     private void setupTabIcons() {
 
         //get tabs as textViews
@@ -148,14 +136,6 @@ public class MainActivity extends AppCompatActivity {
         tabNews.setText("Newsfeed");
         tabMap.setText("Map");
 
-        //assign icons to the tabs
-        tabNews.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_newsfeed, 0, 0);
-        tabMap.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_map, 0, 0);
-
-        //set negative padding or the tabindiciators occlude the tab text
-        tabNews.setCompoundDrawablePadding(-12);
-        tabMap.setCompoundDrawablePadding(-12);
-
         //set these parameters to the tabs
         tabLayout.getTabAt(0).setCustomView(tabNews);
         tabLayout.getTabAt(1).setCustomView(tabMap);
@@ -165,8 +145,8 @@ public class MainActivity extends AppCompatActivity {
     //this method sets up our custom viewpager
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new NewsFeedFragment("placeholder"), "NEWSFEED"); //Custom website URLs
-        adapter.addFragment(new MapFragment("placeholder"), "MAP");
+        adapter.addFragment(new NewsFeedFragment("****"), "NEWSFEED"); //Custom website URLs
+        adapter.addFragment(new MapFragment("****"), "MAP");
         viewPager.setAdapter(adapter);
     }
 

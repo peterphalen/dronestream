@@ -23,7 +23,7 @@ public class NewsFeedFragment extends Fragment {
     private WebView mWebView;
     private boolean mIsWebViewAvailable;
     ProgressDialog progress;
-    private String mUrl = "placeholder";
+    private String mUrl = "****";
 
     /**
      * Creates a new fragment which loads the supplied url as soon as it can
@@ -52,11 +52,11 @@ public class NewsFeedFragment extends Fragment {
         progress = ProgressDialog.show(getActivity(), "Loading", "Please wait...", true);
         mWebView.setWebViewClient(new InnerWebViewClient() {
 
-            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+            public void onPageFinished(WebView view, String url) {
                 if ( progress != null  ) {
                     progress.dismiss();
                 }
-                super.onPageStarted(view, url, favicon);
+                super.onPageFinished(view, url);
 
             }
 
