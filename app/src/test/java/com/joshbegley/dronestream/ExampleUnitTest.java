@@ -1,4 +1,4 @@
-package phalen.peter.dronestream;
+package com.joshbegley.dronestream;
 
 
 import static junit.framework.Assert.assertEquals;

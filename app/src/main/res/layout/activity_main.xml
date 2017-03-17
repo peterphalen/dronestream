@@ -42,7 +42,7 @@
         </android.support.v7.widget.Toolbar>
 
 
-        <phalen.peter.dronestream.CustomViewPager
+        <com.joshbegley.dronestream.CustomViewPager
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
-            android:paddingTop="10dp"
+            android:paddingTop="13dp"
             android:paddingRight="5dp"
 
             android:background="@android:color/transparent"

@@ -1,4 +1,4 @@
-package phalen.peter.dronestream;
+package phalen.joshbegley.dronestream;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

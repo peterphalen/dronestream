@@ -5,10 +5,10 @@ android {
     buildToolsVersion "25.0.0"
 
     defaultConfig {
-        applicationId "phalen.peter.dronestream"
+        applicationId "com.joshbegley.dronestream"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 1
+        versionCode 10
         versionName "0.1"
 
         manifestPlaceholders = [onesignal_app_id: "****",
@@ -17,10 +17,14 @@ android {
 
 
     }
+
+
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
         }
     }
 

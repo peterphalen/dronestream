@@ -1,10 +1,9 @@
-package phalen.peter.dronestream;
+package com.joshbegley.dronestream;
 
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
-import android.net.Uri;
 import android.provider.Settings;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -24,11 +23,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import phalen.peter.dronestream.CustomViewPager;
-import phalen.peter.dronestream.MapFragment;
-import phalen.peter.dronestream.NewsFeedFragment;
-import phalen.peter.dronestream.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -120,10 +114,13 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
         //these javascript calls request a reload from the urls associated with the fragments
-        adapter.addFragment(new NewsFeedFragment("javascript:window.location.reload( true )"), "NEWSFEED");
-        adapter.addFragment(new MapFragment("javascript:window.location.reload( true )"), "MAP");
+        adapter.addFragment(new NewsFeedFragment("javascript:window.location.reload( true )"), "Newsfeed");
+        adapter.addFragment(new MapFragment("javascript:window.location.reload( true )"), "Map");
         //reset adapter
         viewPager.setAdapter(adapter);
+
+        setupTabIcons(); //this method is defined below
+
     }
 
     private void setupTabIcons() {
@@ -136,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
         tabNews.setText("Newsfeed");
         tabMap.setText("Map");
 
+
         //set these parameters to the tabs
         tabLayout.getTabAt(0).setCustomView(tabNews);
         tabLayout.getTabAt(1).setCustomView(tabMap);
@@ -145,8 +143,8 @@ public class MainActivity extends AppCompatActivity {
     //this method sets up our custom viewpager
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new NewsFeedFragment("****"), "NEWSFEED"); //Custom website URLs
-        adapter.addFragment(new MapFragment("****"), "MAP");
+        adapter.addFragment(new NewsFeedFragment("****"), "Newsfeed"); //Custom website URLs
+        adapter.addFragment(new MapFragment("****"), "Map");
         viewPager.setAdapter(adapter);
     }
 

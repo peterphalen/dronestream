@@ -1,4 +1,4 @@
-package phalen.peter.dronestream;
+package com.joshbegley.dronestream;
 
 import android.content.Context;
 import android.util.AttributeSet;
