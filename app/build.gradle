@@ -8,8 +8,8 @@ android {
         applicationId "com.joshbegley.dronestream"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 10
-        versionName "0.1"
+        versionCode 4
+        versionName "2.0"
 
         manifestPlaceholders = [onesignal_app_id: "****",
                                 // Project number pulled from dashboard

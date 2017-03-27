@@ -7,11 +7,11 @@ To get this running as intended you'll need to clone the project and then follow
 -	Open the app build.gradle and supply the manifestPlaceholders variable with your onesignal app id and your google project number.
 
 
-### Newsfeed:
+### Newsfeed
 
 ![Newsfeed Screenshot](/newsfeedScreenshot.png?raw=true "Newsfeed screenshot")
 
-### Map:
+### Map
 
 ![Newsfeed Screenshot](/mapScreenshot.png?raw=true "Map screenshot")
 

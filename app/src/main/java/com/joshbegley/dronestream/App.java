@@ -5,7 +5,7 @@ import com.onesignal.OneSignal;
 
 
 
-//we call the overarching application class for Parse
+//we call the overarching application class to initialize the push notification system
 public class App extends Application {
 
     @Override
@@ -13,9 +13,6 @@ public class App extends Application {
         super.onCreate();
         OneSignal.startInit(this).init();
 
-        // Call syncHashedEmail anywhere in your app if you have the user's email.
-        // This improves the effectiveness of OneSignal's "best-time" notification scheduling feature.
-        // OneSignal.syncHashedEmail(userEmail);
     }
 
 
